@@ -1706,6 +1706,9 @@ _lp_set_prompt()
         LP_ERR=''     # Hidden
     fi
 
+    # create LP_PS1_PREFIX
+    eval "$LP_PS1_PREFIX_COMMAND"
+
     # Reset IFS to its default value to avoid strange behaviors
     # (in case the user is playing with the value at the prompt)
     local IFS="$_LP_IFS"
